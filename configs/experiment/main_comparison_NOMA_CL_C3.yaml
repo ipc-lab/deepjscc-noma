@@ -1,0 +1,26 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+defaults:
+  - override /datamodule: cifar10.yaml
+  - override /model: deepjscc.yaml
+  - override /callbacks: default.yaml
+  - override /trainer: default.yaml
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+
+tags: ["main_comparison", "nd2", "C6", "singlemodel"]
+
+model:
+  num_devices: 2
+  net:
+    _target_: src.models.nets.singlemodel.SingleModelNet
+    ckpt_path: /home/sfy21/deepjscc-oac/logs/train/runs/2022-10-15_18-53-49/checkpoints/epoch_162.ckpt
+  M: 32
+
+datamodule:
+  regroup_every_training_epoch: 0
+  num_train_samples: 200000

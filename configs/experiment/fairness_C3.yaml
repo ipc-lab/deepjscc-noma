@@ -1,0 +1,22 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+defaults:
+  - override /datamodule: cifar10.yaml
+  - override /model: deepjscc.yaml
+  - override /trainer: default.yaml
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+
+tags: ["fairness", "nd2", "C6", "singlemodel"]
+
+model:
+  num_devices: 2
+  net:
+    _target_: src.models.nets.singlemodel.SingleModelNet
+  M: 32
+
+ckpt_path: /home/sfy21/deepjscc-oac/logs/train/runs/2022-10-17_04-45-47/checkpoints/epoch_106.ckpt
