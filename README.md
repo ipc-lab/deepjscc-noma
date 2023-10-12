@@ -1,15 +1,14 @@
 # Distributed Deep Joint Source-Channel Coding over a Multiple Access Channel \[[Paper](https://arxiv.org/pdf/2211.09920.pdf)\]
 
 ## Citation
-
+Please cite the following paper if this code or paper has been useful to you:
 ```
-@misc{yilmaz2022distributedjscc,
-  doi = {10.48550/ARXIV.2211.09920},
-  url = {https://arxiv.org/abs/2211.09920},
-  author = {Yilmaz, Selim F. and Karamanli, Can and Gunduz, Deniz},
-  title = {Distributed Deep Joint Source-Channel Coding over a Multiple Access Channel},
-  publisher = {arXiv},
-  year = {2022},
+@inproceedings{yilmaz2023distributed,
+      title={Distributed Deep Joint Source-Channel Coding over a Multiple Access Channel}, 
+      author={Selim F. Yilmaz and Can Karamanlı and Deniz Gündüz},
+      booktitle={2023 IEEE International Conference on Communications (ICC)}, 
+      year={2023},
+      organization={IEEE}
 }
 ```
 
